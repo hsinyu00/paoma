@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-TW">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
+    <meta name="keywords" content="關鍵字">
+    <meta name="description" content="網頁描述">
+    <title>寶馬旅行社</title>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="網頁標題"/>
+    <meta property="og:url" content=""/>
+    <meta property="og:description" content="網頁描述" />
+    <meta property="og:image" content=""/>
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <!-- 套件 CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" media="screen">
+
+    <link href="css/base.css" rel="stylesheet">
+
+    {% block css %}{% endblock %}
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+    {% block header %}
+    {% include "partials/_header.twig" %}
+    {% endblock %}
+
+    {% block content %}
+    {% endblock %}
+
+    {% include "partials/_footer.twig" %}
+
+<script src="https://unpkg.com/jquery@3.2.1/dist/jquery.js"></script>
+<script>
+    $(function() {
+        // mobile detect
+        var isMobile = /(phon|android|iPad|iPod|opera mini|blackberry|IEMobile|nokia|motorola|sonyericsson|samsung|lg-|sie-|tablet)/i.test(navigator.userAgent);
+        $('.show-mobile')[isMobile ? 'show' : 'hide']();
+        $('.hide-mobile')[!isMobile ? 'show' : 'hide']();
+    });
+</script>
+
+{% block js %}{% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+@import 'variables';
+@import 'ellipsis';
+@import 'clearfix';
+
+@import 'header';
+@import 'footer';
+
+ul, ol, li {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+img {
+    max-width: 100%;
+}
+.clearfix {
+    @include clearfix();
+}
+
+body {
+    background-color: #f8f8f8;
+    font-size: $font-size-base;
+    font-family: $font-family-base;
+    padding-top: 85px;
+}
+

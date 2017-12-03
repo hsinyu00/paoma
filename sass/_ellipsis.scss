@@ -1,0 +1,13 @@
+// # Mixins
+//
+// ## %text-ellipsis
+// ### Usage
+// `.foo { @extend %text-ellipsis; }`
+%text-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    position: relative;
+}
