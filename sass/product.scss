@@ -1,0 +1,97 @@
+@import 'variables';
+
+%card {
+    position: relative;
+    margin-bottom: 20px;
+    background-color: #fff;
+    opacity: 1;
+    transition-timing-function: ease-out;
+    transition-property: opacity;
+    transition-duration: 0.4s;
+    > a {
+        display: block;
+    }
+    .card-img {
+        width: 100%;
+    }
+    .card-text {
+        z-index: 5;
+    }
+    .card-date {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 1.5;
+        letter-spacing: 0.3px;
+        margin-bottom: 0;
+    }
+    .card-desc {
+        color: #808080;
+        font-size: 18px;
+    }
+    &:hover {
+        opacity: 0.6;
+        a {
+            text-decoration: none;
+        }
+    }
+}
+.card-video {
+    @extend %card;
+    .card-text {
+        position: absolute;
+        width: 100%;
+        top: 70%;
+    }
+    .card-title {
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 12px;
+        font-weight: 700;
+        color: #fff;
+    }
+    .card-subtitle {
+        text-align: center;
+        font-size: 14px;
+        font-weight: 400;
+        color: #fff;
+    }
+}
+.card-topic {
+    @extend %card;
+    .card-title {
+        text-align: center;
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 42px;
+        font-weight: 700;
+        color: #fff;
+        text-shadow: 8px 0 18px #000;
+    }
+}
+.card-trip {
+    @extend %card;
+    margin-bottom: 40px;
+    .card-text {
+        padding: 40px 22px;
+    }
+    .card-desc {
+        color: #808080;
+        font-size: 17px;
+        font-weight: normal;
+        line-height: 1.8;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+    }
+    .card-date {
+        color: #1a1a1a;
+        font-weight: normal;
+        margin-top: 70px;
+        overflow: hidden;
+    }
+}

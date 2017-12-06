@@ -5,6 +5,9 @@
 @import 'header';
 @import 'footer';
 
+@import 'sidebar';
+@import 'pagination';
+
 ul, ol, li {
     padding: 0;
     margin: 0;
@@ -29,4 +32,113 @@ body {
     font-family: $font-family-base;
     padding-top: 85px;
 }
+.full-width {
+    @include clearfix();
+    padding: 0 0 80px;
+}
+.full-width--orange {
+    background-color: $orange;
+}
+.full-width--white {
+    background-color: #fff;
+    margin: 15px;
+}
+.section-title {
+    text-align: center;
+    color: #000;
+    font-size: $font-size-h2;
+    margin-top: 40px;
+}
+.section-subtitle {
+    text-align: center;
+    color: #000;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+.section-subtitle--gray {
+    text-align: center;
+    color: #8f8f8f;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+.section-text {
+    text-align: center;
+    color: #808080;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+.title--white {
+    color: #fff;
+}
+.u-align-center {
+    @include clearfix();
+    text-align: center;
+    margin: auto;
+}
+.btn-action--hollow {
+    display: inline-block;
+    text-align: center;
+    font-size: 24px;
+    color: $orange;
+    border: 1px solid $orange;
+    border-radius: 2px;
+    padding: 18px 0;
+    width: 420px;
+    &:hover,
+    &:link,
+    &:active,
+    &:visited {
+        color: $orange;
+        text-decoration: none;
+    }
+}
+.btn-action {
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    text-align: right;
+    height: 147px;
+    padding-left: 120px;
+    padding-right: 10%;
+    background: #000 url('/images/icon-book.png') 30px 15px no-repeat;
+    &:hover,
+    &:link,
+    &:active,
+    &:visited {
+        color: #fff;
+        text-decoration: none;
+    }
+}
+.btn-action--orange {
+    background-color: $orange;
+}
+.btn-action--black {
+    background-color: #000;
+}
+.banner-contact {
+    height: 147px;
+    background: #000 url('/images/icon-contact.png') 15px 30px no-repeat;
+    font-size: 18px;
+    color: #fff;
+    padding-left: 120px;
+    .tel {
+        font-size: 30px;
+        white-space: nowrap;
+    }
+}
+.btn-inner {
+    margin-top: 74px;
+    transform: translateY(50%);
+}
 
+#video {
+    .row {
+        margin-left: -4px;
+        margin-right: -4px;
+    }
+    [class*='col-'] {
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+}

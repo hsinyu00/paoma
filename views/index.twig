@@ -1,11 +1,42 @@
 {% extends '_base.twig' %}
 
+{% block css %}
+    <link href="css/product.css" rel="stylesheet">
+{% endblock %}
+
 {% block content %}
-<div class="container">
-    index
-    index
-    index
-    index
-    index
-</div>
+    <div class="container">
+        <img src="images/keyimg.jpg" alt="原始部落之美">
+    </div>
+    <div class="full-width full-width--orange" id="video">
+        <h2 class="section-title title--white">精彩影片欣賞</h2>
+        <h4 class="section-subtitle title--white">體驗各地最受歡迎的精彩活動</h4>
+        <div class="container">
+            <div class="row">
+                {% for i in 0..2 %}
+                    <div class="col-xs-12 col-md-4">
+                        {% include 'partials/_card-video.twig' %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="full-width" id="attraction">
+        <div class="u-align-center">
+            <h2 class="section-title">熱門景點推薦</h2>
+            <h4 class="section-subtitle--gray">即刻就來台灣旅遊吧</h4>
+        </div>
+        <div class="container">
+            <div class="row">
+                {% for i in 0..3 %}
+                    <div class="col-xs-12 col-md-3">
+                        {% include 'partials/_card-topic.twig' %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="u-align-center">
+            <a class="btn-action--hollow" href="#">探索全部景點</a>
+        </div>
+    </div>
 {% endblock %}

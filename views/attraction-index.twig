@@ -1,0 +1,60 @@
+{% extends '_base.twig' %}
+
+{% block css %}
+    <link href="css/product.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-3">
+                <div class="sidebar">
+                    <div class="sidebar-header">快速前往</div>
+                    <ul class="sidebar-nav">
+                        <li><h3>北部景點<br><span>North</span></h3>
+                            <ul class="sidebar-subnav">
+                                <li><a href="#">台北</a></li>
+                                <li><a href="#">宜蘭</a></li>
+                                <li><a href="#">新竹</a></li>
+                                <li><a href="#">苗栗</a></li>
+                            </ul>
+                        </li>
+                        <li><h3>中部景點<br><span>Middle</span></h3>
+                            <ul class="sidebar-subnav">
+                                <li><a href="#">台中</a></li>
+                                <li><a href="#">南投</a></li>
+                            </ul>
+                        </li>
+                        <li><h3>東部與西部景點<br><span>East to West</span></h3>
+                            <ul class="sidebar-subnav">
+                                <li><a href="#">花蓮</a></li>
+                                <li><a href="#">台東</a></li>
+                            </ul>
+                        </li>
+                        <li><h3>南部景點<br><span>South</span></h3>
+                            <ul class="sidebar-subnav">
+                                <li><a href="#">高雄</a></li>
+                                <li><a href="#">嘉義</a></li>
+                                <li><a href="#">屏東</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-9">
+                <h2 class="section-title">北部景點</h2>
+                <h4 class="section-subtitle">體驗各地最受歡迎的精彩景點</h4>
+                <div class="row">
+                    {% for i in 0..11 %}
+                    <div class="col-xs-12 col-md-4">
+                        {% include 'partials/_card-trip.twig' %}
+                    </div>
+                    {% endfor %}
+                </div>
+                {% include 'partials/_pagination.twig' %}
+            </div>
+        </div>
+    </div>
+
+    {% include 'partials/_contact-booking.twig' %}
+{% endblock %}
