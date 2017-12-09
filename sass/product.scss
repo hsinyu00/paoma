@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'clearfix';
 
 %card {
     position: relative;
@@ -94,4 +95,58 @@
         margin-top: 70px;
         overflow: hidden;
     }
+}
+
+%media-item {
+    overflow-y: visible;
+    margin: 40px 0 110px;
+    @include clearfix();
+    .media-content {
+        padding: 85px 65px;
+    }
+    .media-title {
+        color: #2d2d2d;
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 70px;
+        line-height: 1.4;
+    }
+    .media-subtitle {
+
+    }
+    .media-text {
+        color: #6b6b6b;
+        font-size: 18px;
+    }
+    .media-img {
+
+    }
+    &.media--imgleft {
+        img {
+            float: left;
+            margin-right: 70px;
+        }
+    }
+    &.media--imgright {
+        img {
+            float: right;
+            margin-left: 70px;
+        }
+    }
+    &.media--almond {
+        .media-content {
+            background-color: #ffefe3;
+        }
+
+    }
+    &.media--gray {
+        .media-content {
+            background-color: #ebedf1;
+        }
+    }
+}
+
+
+.media-item {
+    @extend %media-item;
 }
