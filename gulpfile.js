@@ -16,7 +16,7 @@ gulp.task('styles', function () {
 });
 
 gulp.task('htmls', function () {
-    return gulp.src(['views/**/*.*', '!views/**/_*.*'], { base: 'views' })
+    return gulp.src(['views/**/*.*', '!views/partials/**', '!views/**/_*.*'], { base: 'views' })
         .pipe($.plumber())
         .pipe($.twig({
             data: {},
@@ -37,7 +37,7 @@ gulp.task('copy', function () {
 
 // Clean
 gulp.task('clean', function(cb) {
-    del(['public/css/**/*.css', 'public/**/*.html'], cb);
+    del('public/**/**', cb);
 });
 
 // Start Web server
