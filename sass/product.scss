@@ -111,25 +111,17 @@
         margin-bottom: 70px;
         line-height: 1.4;
     }
-    .media-subtitle {
-
-    }
     .media-text {
         color: #6b6b6b;
         font-size: 18px;
     }
-    .media-img {
-
-    }
     &.media--imgleft {
         img {
-            float: left;
             margin-right: 70px;
         }
     }
     &.media--imgright {
         img {
-            float: right;
             margin-left: 70px;
         }
     }
@@ -145,8 +137,135 @@
         }
     }
 }
-
-
+.media--imgleft {
+    img {
+        float: left;
+    }
+}
+.media--imgright {
+    img {
+        float: right;
+    }
+}
 .media-item {
     @extend %media-item;
+    .media-subtitle {
+        font-size: 24px;
+        font-weight: 700;
+        color: $orange;
+    }
+    .media-remark {
+        font-size: 18px;
+        color: $orange;
+    }
+}
+.feature {
+
+}
+.feature-title {
+    color: #2d2d2f;
+    border-top: 1px solid #bebebe;
+    border-bottom: 1px solid #bebebe;
+    padding: 18px 0;
+    margin-bottom: 35px;
+}
+.feature-list {
+    li {
+        color: #2f3031;
+        font-size: 14px;
+        &::before {
+            content: '・';
+            color: $orange;
+            display: inline-block;
+        }
+    }
+}
+.trip-daily {
+}
+.trip-daily--almond {
+    background-color: #ffefe3;
+}
+.trip-daily--gray  {
+    background-color: #ebedf1;
+}
+.trip-daily-header {
+    display: table;
+}
+.trip-daily-mark {
+    display: table-cell;
+    color: #fff;
+    width: 108px;
+    height: 108px;
+    background: transparent url('/images/icon-day.svg') no-repeat center center;
+}
+.trip-daily-right {
+    display: table-cell;
+}
+.trip-daily-day {
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+}
+.trip-daily-route {
+    font-size: 18px;
+    color: #000;
+}
+.trip-daily-desc {
+    font-size: 18px;
+    color: #808080;
+
+}
+.trip-daily-remark {
+    font-size: 18px;
+    color: $orange;
+}
+.trip-daily-meal-hotel {
+    background-color: #ebedf1;
+    li {
+        padding-left: 85px;
+        font-size: 18px;
+        color: #101010;
+    }
+}
+.trip-daily-meal {
+    background: transparent url('/images/icon-meal.png') no-repeat 0 0;
+}
+.trip-daily-hotel {
+    background: transparent url('/images/icon-hotel.svg') no-repeat 0 0;
+}
+.section--almond {
+    background-color: #ffefe3;
+}
+.section--white {
+        background-color: #000;
+}
+.readme {
+    dl {
+        border-top: 1px solid $orange;
+        display: table;
+        vertical-align: top;
+    }
+    dt {
+        font-size: 18px;
+        color: #000;
+        width: 20%;
+    }
+    dd {
+        font-size: 18px;
+        color: #808080;
+        width: 80%;
+    }
+}
+.readme-title {
+    color: #2d2d2f;
+    font-size: 24px;
+    span {
+        color: $orange;
+        font-size: 12px;
+    }
+}
+.caption {
+    color: #8f8f8f;
+    font-size: 18px;
+    margin: 10px 0 65px;
 }

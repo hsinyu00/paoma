@@ -67,6 +67,11 @@ body {
     font-size: 18px;
     margin-bottom: 30px;
 }
+.caption {
+    color: #8f8f8f;
+    font-size: 18px;
+    margin: 10px 0 65px;
+}
 .title--white {
     color: #fff;
 }
@@ -131,7 +136,34 @@ body {
     margin-top: 74px;
     transform: translateY(50%);
 }
-
+.banner-contact-xl {
+    @include clearfix();
+    background-color: #fff;
+    .tel {
+        font-size: 48px;
+        color: #000;
+    }
+}
+.banner-contact-left {
+    float: left;
+    font-size: 24px;
+    color: #000;
+    span {
+        color: $orange;
+        font-size: 14px;
+    }
+}
+.banner-contact-right {
+    float: right;
+    span {
+        font-size: 18px;
+        color: #808080;
+    }
+}
+.banner-contact-remark {
+    font-size: 18px;
+    color: $orange;
+}
 #video {
     .row {
         margin-left: -4px;
