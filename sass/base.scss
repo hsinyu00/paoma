@@ -67,11 +67,6 @@ body {
     font-size: 18px;
     margin-bottom: 30px;
 }
-.caption {
-    color: #8f8f8f;
-    font-size: 18px;
-    margin: 10px 0 65px;
-}
 .title--white {
     color: #fff;
 }
@@ -98,15 +93,15 @@ body {
     }
 }
 .btn-action {
-    display: block;
-    text-align: center;
-    font-size: 24px;
+    width: 100%;
+    display: table;
+    font-size: 36px;
     color: #fff;
     text-align: right;
     height: 147px;
     padding-left: 120px;
     padding-right: 10%;
-    background: #000 url('/images/icon-book.png') 30px 15px no-repeat;
+    background: #000 url('/images/icon-book.png') 15px center no-repeat;
     &:hover,
     &:link,
     &:active,
@@ -122,19 +117,22 @@ body {
     background-color: #000;
 }
 .banner-contact {
+    width: 100%;
+    display: table;
     height: 147px;
-    background: #000 url('/images/icon-contact.png') 15px 30px no-repeat;
+    background: #000 url('/images/icon-contact.png') 15px center no-repeat;
     font-size: 18px;
     color: #fff;
-    padding-left: 120px;
+    padding: 0 40px 0 120px;
     .tel {
-        font-size: 30px;
+        font-size: 45px;
         white-space: nowrap;
     }
 }
 .btn-inner {
-    margin-top: 74px;
-    transform: translateY(50%);
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
 }
 .banner-contact-xl {
     @include clearfix();
