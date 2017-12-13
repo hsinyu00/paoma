@@ -3,15 +3,13 @@
 var gulp = require('gulp'),
     $ = require('gulp-load-plugins')(),
     sass = require('gulp-sass'),
-    sourcemaps = require('gulp-sourcemaps'),
-    del = require('del');
+    del = require('del'),
+    docCssUrl = '/paoma';
 
 // Styles
 gulp.task('styles', function () {
   return gulp.src('sass/**/*.scss')
-    // .pipe(sourcemaps.init())
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-    // .pipe(sourcemaps.write())
     .pipe(gulp.dest('public/css'));
 });
 
@@ -74,6 +72,14 @@ gulp.task('watch', ['copy', 'styles', 'htmls'], function() {
     $.watch('views/**/**', function () {
         gulp.start('htmls');
     });
+});
+
+//Docs
+gulp.task('docs', function() {
+    return gulp.src('public/**/*.*')
+        .pipe(gulp.dest('docs'))
+        .pipe($.replace('url("/images/', 'url("' + docCssUrl + '/images/'))
+        .pipe(gulp.dest('docs'));
 });
 
 // Default
