@@ -110,6 +110,17 @@
         font-weight: 700;
         margin-bottom: 70px;
         line-height: 1.4;
+        span {
+            display: block;
+            font-size: 12px;
+            font-weight: 400;
+        }
+    }
+    .media-img {
+        max-width: 70%;
+        & + .media-img {
+            margin-top: 10px;
+        }
     }
     .media-text {
         color: #6b6b6b;
@@ -159,6 +170,41 @@
         color: $orange;
     }
 }
+.media-trip {
+    margin-bottom: 30px;
+    .row {
+        margin: 0 -8px;
+    }
+    [class^="col-"] {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    .media-title {
+        font-size: 24px;
+        font-weight: 400;
+        color: #000;
+    }
+    .media-subtitle {
+        font-size: 24px;
+        font-weight: 400;
+        color: $orange;
+    }
+    .media-remark {
+        font-size: 18px;
+        color: $orange;
+    }
+    .media-title,
+    .media-subtitle,
+    .media-remark {
+        margin-bottom: 14px;
+    }
+    .media-content {
+        height: 100%;
+        background-color: #fff;
+        padding: 60px 50px 0;
+    }
+}
+
 .feature {
 
 }
@@ -173,14 +219,29 @@
     li {
         color: #2f3031;
         font-size: 14px;
+        line-height: 1;
         &::before {
             content: '・';
+            font-size: 26px;
             color: $orange;
             display: inline-block;
+            vertical-align: middle;
+            margin-right: 10px;
         }
     }
 }
 .trip-daily {
+    position: relative;
+    &::after {
+        display: block;
+        content: '';
+        position: absolute;
+        top: 95px;
+        z-index: -1;
+        width: 100%;
+        height: 495px;
+        background-color: #ffefe3;
+    }
 }
 .trip-daily--almond {
     background-color: #ffefe3;
@@ -190,16 +251,32 @@
 }
 .trip-daily-header {
     display: table;
+    background-color: #fff;
+    width: 100%;
 }
 .trip-daily-mark {
-    display: table-cell;
+    display: block;
+    vertical-align: middle;
+    text-align: center;
     color: #fff;
     width: 108px;
     height: 108px;
-    background: transparent url('/images/icon-day.svg') no-repeat center center;
+    line-height: 108px;
+    background: transparent url('/images/icon-day.png') no-repeat center center;
+    span {
+        letter-spacing: 4px;
+    }
+}
+.trip-daily-left {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 30px;
+    width: 108px;
 }
 .trip-daily-right {
     display: table-cell;
+    vertical-align: middle;
+    padding-left: 15px;
 }
 .trip-daily-day {
     font-size: 24px;
@@ -213,54 +290,69 @@
 .trip-daily-desc {
     font-size: 18px;
     color: #808080;
-
-}
-.trip-daily-remark {
-    font-size: 18px;
-    color: $orange;
-}
-.trip-daily-meal-hotel {
-    background-color: #ebedf1;
-    li {
-        padding-left: 85px;
+    margin: 40px 15px 80px;
+    em {
+        font-style: normal;
         font-size: 18px;
-        color: #101010;
+        color: $orange;
     }
 }
+.trip-daily-meal-hotel {
+    background-color: #fff;
+    padding: 20px 10px;
+    font-size: 18px;
+    color: #101010;
+    margin-bottom: 35px;
+}
 .trip-daily-meal {
+    display: inline-block;
+    width: 65px;
+    height: 65px;
+    margin: 10px;
+    vertical-align: middle;
     background: transparent url('/images/icon-meal.png') no-repeat 0 0;
 }
 .trip-daily-hotel {
-    background: transparent url('/images/icon-hotel.svg') no-repeat 0 0;
+    display: inline-block;
+    width: 65px;
+    height: 65px;
+    margin: 10px;
+    vertical-align: middle;
+    background: transparent url('/images/icon-hotel.png') no-repeat 0 0;
 }
-.section--almond {
-    background-color: #ffefe3;
-}
-.section--white {
-        background-color: #000;
+#trip-content {
+    margin-bottom: 100px;
 }
 .readme {
     dl {
-        border-top: 1px solid $orange;
+        display: table;
+        width: 100%;
+        border-top: 1px solid #e79d59;
         display: table;
         vertical-align: top;
+        padding: 40px 0;
     }
     dt {
+        display: table-cell;
         font-size: 18px;
         color: #000;
-        width: 20%;
+        width: 17%;
     }
     dd {
+        display: table-cell;
         font-size: 18px;
         color: #808080;
-        width: 80%;
+        width: 83%;
     }
 }
 .readme-title {
     color: #2d2d2f;
     font-size: 24px;
+    padding-bottom: 30px;
     span {
-        color: $orange;
+        margin-top: 15px;
+        display: block;
+        color: #1a1a1a;
         font-size: 12px;
     }
 }
@@ -268,4 +360,20 @@
     color: #8f8f8f;
     font-size: 18px;
     margin: 10px 0 65px;
+}
+.table-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.pickup-table {
+    background-color: #fff;
+    width: 100%;
+    margin-bottom: 117px;
+    th, td {
+        border: 1px solid #bcbcbc;
+        font-size: 28px;
+        font-weight: normal;
+        text-align: center;
+        padding: 15px 0;
+    }
 }

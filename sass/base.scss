@@ -32,6 +32,18 @@ body {
     font-family: $font-family-base;
     padding-top: 85px;
 }
+.breadcrumb {
+    background-color: transparent;
+    color: #868686;
+    a,
+    a:link,
+    a:visited,
+    a:active,
+    span {
+        font-size: 14px;
+        color: #868686;
+    }
+}
 .full-width {
     @include clearfix();
     padding: 0 0 80px;
@@ -40,6 +52,14 @@ body {
     background-color: $orange;
 }
 .full-width--white {
+    padding: 95px 0 117px;
+    background-color: #fff;
+}
+.full-width--almond {
+    padding: 95px 0 117px;
+    background-color: #ffefe3;
+}
+.section--white {
     background-color: #fff;
 }
 .section-title {
@@ -61,18 +81,12 @@ body {
     margin-bottom: 30px;
 }
 .section-text {
-    text-align: center;
     color: #808080;
     font-size: 18px;
     margin-bottom: 30px;
 }
 .title--white {
     color: #fff;
-}
-.u-align-center {
-    @include clearfix();
-    text-align: center;
-    margin: auto;
 }
 .btn-action--hollow {
     display: inline-block;
@@ -133,9 +147,12 @@ body {
     text-align: right;
     vertical-align: middle;
 }
-.banner-contact-xl {
+.banner-contact--xl {
     @include clearfix();
     background-color: #fff;
+    padding: 40px 70px;
+    margin: 60px 0 100px;
+    line-height: 1.1;
     .tel {
         font-size: 48px;
         color: #000;
@@ -145,6 +162,7 @@ body {
     float: left;
     font-size: 24px;
     color: #000;
+    padding-top: 10px;
     span {
         color: $orange;
         font-size: 14px;
@@ -152,14 +170,23 @@ body {
 }
 .banner-contact-right {
     float: right;
+    text-align: right;
     span {
         font-size: 18px;
         color: #808080;
+    }
+    .remark {
+        color: $orange;
     }
 }
 .banner-contact-remark {
     font-size: 18px;
     color: $orange;
+}
+.u-align-center {
+    @include clearfix();
+    text-align: center;
+    margin: auto;
 }
 #video {
     .row {
