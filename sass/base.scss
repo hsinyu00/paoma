@@ -56,7 +56,8 @@ body {
     background-color: #fff;
 }
 .full-width--almond {
-    padding: 95px 0 117px;
+    padding: 95px 0 0;
+    margin-bottom: 90px;
     background-color: #ffefe3;
 }
 .section--white {
@@ -186,7 +187,10 @@ body {
 .u-align-center {
     @include clearfix();
     text-align: center;
-    margin: auto;
+    margin: inherit auto;
+}
+.u-overlap-section {
+    margin-top: -250px;
 }
 #video {
     .row {
