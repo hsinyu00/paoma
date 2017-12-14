@@ -1,0 +1,23 @@
+{% extends '_base.twig' %}
+
+{% block css %}
+    <link href="css/product.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h2 class="section-title">本月特惠</h2>
+        <h4 class="section-subtitle">在此將您的精彩回憶盡情寫下!</h4>
+        <div class="entry-list">
+            <dl>
+                <dt class="name">MEI CHI</dt>
+                <dd>餐廳設計裝潢有特色，更有敬老優惠滿60歲半價，價錢很優<br>午餐cp值高，食物美味，有機會必一定再度光臨<br>車子很舒服</dd>
+            </dl>
+            <dl class="entry--vip">
+                <dt class="name">趣台灣</dt>
+                <dd>謝謝您!歡迎再看到您喔!</dd>
+            </dl>
+        </div>
+        {% include 'partials/_pagination.twig' %}
+    </div>
+{% endblock %}

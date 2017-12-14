@@ -382,10 +382,16 @@
     }
 }
 .entry-list {
-    li {
+    li, dl {
+        font-size: 18px;
         background-color: #fff;
         padding: 32px 60px;
         margin-bottom: 22px;
+        color: #808080;
+    }
+    .name {
+        color: #000;
+        margin-bottom: 15px;
     }
     a,
     a:link,
@@ -394,7 +400,11 @@
         font-size: 18px;
         color: #808080;
     }
+    .entry--vip {
+        background-color: #ffefe3;
+    }
 }
+
 .video-container {
     position: relative;
     height: 0;
