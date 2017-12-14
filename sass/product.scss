@@ -381,3 +381,17 @@
         padding: 15px 0;
     }
 }
+.entry-list {
+    li {
+        background-color: #fff;
+        padding: 32px 60px;
+        margin-bottom: 22px;
+    }
+    a,
+    a:link,
+    a:visited,
+    a:active {
+        font-size: 18px;
+        color: #808080;
+    }
+}
