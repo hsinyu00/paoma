@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block content %}
-    <h2 class="section-title">自訂行程規劃</h2>
+    <h2 class="section-title">立即報名 ‧ 熱門行程</h2>
     <h4 class="section-subtitle">旅遊的事，就放心交給我們吧</h4>
     <p class="section-text u-align-center">在臺灣，每個所到之處，多樣的文化特質都充沛鼓動著<br>
         雕龍畫棟的廟宇與現代的街道完美吻合<br>
@@ -28,59 +28,16 @@
         <form class="form">
             <div class="required-mark">※ 必須</div>
             <div class="form-item">
-                <label for="cname">中文全名</label>
+                <label for="cname">您的全名</label>
                 <input type="text" class="form-textfield" id="cname" placeholder="正確填寫您的姓氏與名字。舉例：符宇帆">
             </div>
-            <div class="form-item">
-                <label for="ename">英文全名<i class="required">※</i></label>
-                <input type="text" class="form-textfield" id="ename" placeholder="正確填寫您的護照英文全名">
-            </div>
-            <div class="form-item">
-                <label for="country">居住國家<i class="required">※</i></label>
-                <select id="country">
-                    <option>請選擇</option>
-                    <option>台灣</option>
-                    <option>香港</option>
-                </select>
-            </div>
-            <div class="form-item">
+             <div class="form-item">
                 <label for="email">電子信箱<i class="required">※</i></label>
                 <input type="text" class="form-textfield" id="email">
             </div>
             <div class="form-item">
-                <label for="line">您的 line ID</label>
-                <input type="text" class="form-textfield" id="line">
-            </div>
-            <div class="form-item">
-                <label for="wechat">您的 WECHAT ID</label>
-                <input type="text" class="form-textfield" id="wechat">
-            </div>
-            <div class="form-item">
-                <label for="attraction">希望去的景點</label>
-                <textarea class="form-textarea" id="attraction" rows="4" placeholder="明確的填寫您想去景點或是特別的地方，讓我們為您將來台的夢想實現&#10;舉例：我想去台北101、陽明山和日月潭、玉山及夜市"></textarea>
-            </div>
-            <div class="form-item">
-                <label >自訂日期</label>
-                <span>預計來台日期
-                    <select>
-                        <option>4</option>
-                    </select>
-                    月
-                    <select>
-                        <option>1</option>
-                    </select>
-                    日
-                </span>
-                <span>回程日期
-                    <select>
-                        <option>4</option>
-                    </select>
-                    月
-                    <select>
-                        <option>1</option>
-                    </select>
-                    日
-                </span>
+                <label>行程名稱</label>
+                <p>【連休假期】農場+海洋公園歡樂2日(經濟篇 )參考售價 : 3990元 </p>
             </div>
             <div class="form-item">
                 <label>參加人數</label>
@@ -117,16 +74,13 @@
                         <input type="checkbox" name="misc"><label>飯店訂房</label>
                     </span>
                     <span>
-                        <input type="checkbox" name="room"><label>民宿</label>
-                        <input type="checkbox" name="room"><label>汽車旅館</label>
-                        <input type="checkbox" name="room"><label>三星級</label>
-                        <input type="checkbox" name="room"><label>四星級</label>
-                        <input type="checkbox" name="room"><label>五星級</label>
+                        <input type="radio" name="room"><label>一星級</label>
+                        <input type="radio" name="room"><label>二星級</label>
+                        <input type="radio" name="room"><label>三星級</label>
+                        <input type="radio" name="room"><label>四星級</label>
+                        <input type="radio" name="room"><label>五星級</label>
                     </span><br>
-                    <span><input type="checkbox" name="misc"><label>機場接送</label></span>
-                    <span><label>指定車型</label><input type="text"></span><br>
-                    <span><input type="checkbox" name="misc"><label>指定導遊</label></span>
-                    <span><input type="text"></span><br>
+                    <span><input type="checkbox" name="misc"><label>機場接送</label></span><br>
                     <span><input type="checkbox" name="misc"><label>其他</label></span>
                     <span><input type="text" placeholder="特殊的票券或門票。舉例：我想去礁溪泡溫泉和故宮看展"></span>
                 </fieldset>
@@ -148,7 +102,7 @@
             </div>
 
             <div class="form-agree"><input type="checkbox" name="misc">※ 點擊左側方框，即表示您已閱讀並同意旅遊契約條款</div>
-            <button class="btn-action btn-action--black"><span class="ok">ok</span>完成訂購</button>
+            <button class="btn-action btn-action--black"><span class="ok">OK!</span>完成訂購</button>
         </form>
     </div>
 {% endblock %}
