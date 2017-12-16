@@ -213,3 +213,22 @@ body {
         padding-right: 4px;
     }
 }
+.privacy {
+    margin-top: 130px;
+    .section-title {
+        margin-bottom: 40px;
+    }
+    .section-text {
+        margin-bottom: 50px;
+    }
+}
+.privacy-subtitle {
+    font-size: 24px;
+    margin-bottom: 25px;
+    &:before {
+        content: '●';
+        color: $orange;
+        font-size: 40px;
+        vertical-align: sub;
+    }
+}
