@@ -2,6 +2,7 @@
 
 {% block css %}
     <link href="css/product.css" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet">
 {% endblock %}
 
 {% block content %}
@@ -19,5 +20,17 @@
             </dl>
         </div>
         {% include 'partials/_pagination.twig' %}
+
+        <div class="entry-list">
+            <form class="form">
+                <div class="form-item">
+                    <input type="text" id="nickname" placeholder="您的暱稱">
+                </div>
+                <div class="form-item">
+                    <textarea id="feedback" rows="8" placeholder="將您對於行程的感受寫下來，做為我們進步的動力!"></textarea>
+                </div>
+                <button class="btn-action btn-action--orange">完成送出</button>
+            </form>
+        </div>
     </div>
 {% endblock %}

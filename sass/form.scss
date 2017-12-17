@@ -90,4 +90,39 @@
         margin: 0 10px;
     }
 }
-
+.ok {
+    position: absolute;
+    display: inline-block;
+    width: 41px;
+    height: 2px;
+    background-color: #fff;
+    margin-left: 6px;
+    bottom: .2em;
+    -webkit-transition: -webkit-transform .5s ease-in-out;
+    transition: -webkit-transform .5s ease-in-out;
+    transition: transform .5s ease-in-out;
+    transition: transform .5s ease-in-out,-webkit-transform .5s ease-in-out;
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        right: -2px;
+        bottom: -2px;
+        background-color: #1a1a1a;
+        width: 100%;
+        height: 2px;
+        z-index: 2;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 2px;
+        height: 19px;
+        right: -2px;
+        bottom: 0;
+        background-color: #fff;
+        transform-origin: right bottom;
+        transform: rotate(-45deg);
+    }
+}
