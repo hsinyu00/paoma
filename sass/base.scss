@@ -2,10 +2,10 @@
 @import 'ellipsis';
 @import 'clearfix';
 
-@media (min-width: 0) and (max-width: 768px) {
+@media (min-width: 0) and (max-width: 991px) {
     @import 'header-mobile';
 }
-@media (min-width: 769px) {
+@media (min-width: 992px) {
     @import 'header';
 }
 @import 'footer';
