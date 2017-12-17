@@ -2,7 +2,12 @@
 @import 'ellipsis';
 @import 'clearfix';
 
-@import 'header';
+@media (min-width: 0) and (max-width: 768px) {
+    @import 'header-mobile';
+}
+@media (min-width: 769px) {
+    @import 'header';
+}
 @import 'footer';
 
 @import 'sidebar';
@@ -132,7 +137,7 @@ body {
 }
 .btn-action--orange {
     background-color: $orange;
-    background: #000 url('/images/icon-book.png') 15px center no-repeat;
+    background: $orange url('/images/icon-book.png') 15px center no-repeat;
 }
 .btn-action--black {
     background-color: #000;

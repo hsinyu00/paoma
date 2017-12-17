@@ -32,7 +32,7 @@
     {% block content %}
     {% endblock %}
 
-    {% include "partials/_footer.twig" %}
+    {# {% include "partials/_footer.twig" %} #}
 
 <script src="https://unpkg.com/jquery@3.2.1/dist/jquery.js"></script>
 <script>
@@ -41,6 +41,22 @@
         var isMobile = /(phon|android|iPad|iPod|opera mini|blackberry|IEMobile|nokia|motorola|sonyericsson|samsung|lg-|sie-|tablet)/i.test(navigator.userAgent);
         $('.show-mobile')[isMobile ? 'show' : 'hide']();
         $('.hide-mobile')[!isMobile ? 'show' : 'hide']();
+
+        // [mobile only] header menu toggle
+        $('.nav-toggle-mobile').click(function(e){
+            e.stopPropagation();
+            if($('header').hasClass('is-open-mobile')) {
+                $('header').removeClass('is-open-mobile');
+                $(this).find('i').addClass('icon-hamburger');
+                $(this).find('i').removeClass('icon-close');
+                $(this).find('.label').html('Menu');
+            } else {
+                $('header').addClass('is-open-mobile');
+                $(this).find('i').removeClass('icon-hamburger');
+                $(this).find('i').addClass('icon-close');
+                $(this).find('.label').html('Close');
+            }
+        });
     });
 </script>
 
