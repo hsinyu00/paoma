@@ -99,16 +99,16 @@
 
 %media-item {
     overflow-y: visible;
-    margin: 40px 0 110px;
+    margin: 40px 0 60px;
     @include clearfix();
     .media-content {
-        padding: 85px 65px;
+        padding: 35px 25px;
     }
     .media-title {
         color: #2d2d2d;
-        font-size: 24px;
+        font-size: 20px;
         font-weight: 700;
-        margin-bottom: 70px;
+        margin-bottom: 30px;
         line-height: 1.4;
         span {
             display: block;
@@ -117,7 +117,7 @@
         }
     }
     .media-img {
-        max-width: 70%;
+        width: 100%;
         & + .media-img {
             margin-top: 10px;
         }
@@ -126,16 +126,7 @@
         color: #6b6b6b;
         font-size: 18px;
     }
-    &.media--imgleft {
-        img {
-            margin-right: 70px;
-        }
-    }
-    &.media--imgright {
-        img {
-            margin-left: 70px;
-        }
-    }
+
     &.media--almond {
         .media-content {
             background-color: #ffefe3;
@@ -147,15 +138,44 @@
             background-color: #ebedf1;
         }
     }
-}
-.media--imgleft {
-    img {
-        float: left;
+    @media(min-width: 992px){
+        margin: 40px 0 110px;
+        .media-img {
+            max-width: 70%;
+            & + .media-img {
+                margin-top: 10px;
+            }
+        }
+        .media-title {
+            font-size: 24px;
+            margin-bottom: 70px;
+        }
+        .media-content {
+            padding: 85px 65px;
+        }
+        &.media--imgleft {
+            img {
+                margin-right: 70px;
+            }
+        }
+        &.media--imgright {
+            img {
+                margin-left: 70px;
+            }
+        }
     }
 }
-.media--imgright {
-    img {
-        float: right;
+
+@media(min-width: 992px){
+    .media--imgleft {
+        img {
+            float: left;
+        }
+    }
+    .media--imgright {
+        img {
+            float: right;
+        }
     }
 }
 .media-item {
