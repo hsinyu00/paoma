@@ -204,10 +204,6 @@
         padding: 60px 50px 0;
     }
 }
-
-.feature {
-
-}
 .feature-title {
     color: #2d2d2f;
     border-top: 1px solid #bebebe;
@@ -385,9 +381,13 @@
     li, dl {
         font-size: 18px;
         background-color: #fff;
-        padding: 32px 60px;
+        padding: 32px;
         margin-bottom: 22px;
         color: #808080;
+
+        @media(min-width: 768px) {
+            padding: 32px 60px;
+        }
     }
     .name {
         color: #000;

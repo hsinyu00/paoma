@@ -126,7 +126,7 @@ body {
     position: relative;
     width: 100%;
     display: table;
-    font-size: 36px;
+    font-size: 30px;
     color: #fff;
     text-align: right;
     height: 147px;
@@ -138,6 +138,10 @@ body {
     &:visited {
         color: #fff;
         text-decoration: none;
+    }
+
+    @media(min-width: 768px) {
+        font-size: 36px;
     }
 }
 .btn-action--orange {
@@ -160,6 +164,7 @@ body {
     font-size: 18px;
     color: #fff;
     padding: 0 40px 0 120px;
+    margin-bottom: 15px;
     .tel {
         font-size: 22px;
         white-space: nowrap;
@@ -239,12 +244,15 @@ body {
     }
 }
 .privacy {
-    margin-top: 130px;
+    margin-top: 50px;
     .section-title {
         margin-bottom: 40px;
     }
     .section-text {
         margin-bottom: 50px;
+    }
+    @media(min-width: 992px) {
+        margin-top: 130px;
     }
 }
 .privacy-subtitle {
