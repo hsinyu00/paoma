@@ -117,7 +117,6 @@
         }
     }
     .media-img {
-        width: 100%;
         & + .media-img {
             margin-top: 10px;
         }
@@ -125,6 +124,7 @@
     .media-text {
         color: #6b6b6b;
         font-size: 18px;
+        overflow: hidden;
     }
 
     &.media--almond {
@@ -161,6 +161,11 @@
         &.media--imgright {
             img {
                 margin-left: 70px;
+            }
+        }
+        &.media--imgvertical {
+            img {
+                width: 45%;
             }
         }
     }
@@ -394,16 +399,17 @@
     top:0;
     th, td {
         border: 1px solid #bcbcbc;
-        font-size: 18px;
+        font-size: 20px;
         font-weight: normal;
         text-align: center;
         padding: 15px 0;
         word-break: keep-all;
+        font-family: "Open sans", sans-serif, $font-family-base;
     }
     @media(min-width: 992px) {
         width: 100%;
         th, td {
-            font-size: 28px;
+            font-size: 25px;
             width: auto;
             word-break: initial;
         }

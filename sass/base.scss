@@ -61,8 +61,11 @@ body {
     background-color: $orange;
 }
 .full-width--white {
-    padding: 85px 0 100px;
+    padding: 35px 0 70px;
     background-color: #fff;
+    @media(min-width: 992px) {
+        padding: 85px 0 100px;
+    }
 }
 .full-width--almond {
     padding: 95px 0 0;
