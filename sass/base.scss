@@ -57,7 +57,7 @@ body {
     background-color: $orange;
 }
 .full-width--white {
-    padding: 95px 0 117px;
+    padding: 85px 0 100px;
     background-color: #fff;
 }
 .full-width--almond {
@@ -119,6 +119,7 @@ body {
     }
 }
 .btn-action {
+    position: relative;
     width: 100%;
     display: table;
     font-size: 36px;
@@ -126,7 +127,7 @@ body {
     text-align: right;
     height: 147px;
     padding-left: 120px;
-    padding-right: 10%;
+    padding-right: 5%;
     &:hover,
     &:link,
     &:active,
@@ -142,8 +143,13 @@ body {
 .btn-action--black {
     background-color: #000;
 }
+.btn-action--narrow {
+    font-size: 28px;
+    height: 80px;
+}
 .banner-contact {
     width: 100%;
+    font-family: 'Open Sans', sans-serif;
     display: table;
     height: 147px;
     background: #000 url('/images/icon-contact.png') 15px center no-repeat;
@@ -151,8 +157,15 @@ body {
     color: #fff;
     padding: 0 40px 0 120px;
     .tel {
-        font-size: 45px;
+        font-size: 22px;
         white-space: nowrap;
+
+        @media(min-width: 992px) {
+            font-size: 34px;
+        }
+        @media(min-width: 1200px) {
+            font-size: 45px;
+        }
     }
 }
 .btn-inner {
@@ -199,6 +212,9 @@ body {
 .remark {
     font-style: normal;
     color: $orange;
+}
+.tel {
+    font-family: "PT sans", sans-serif !important;
 }
 .u-align-center {
     @include clearfix();
