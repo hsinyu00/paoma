@@ -170,7 +170,6 @@
         }
     }
 }
-
 @media(min-width: 992px){
     .media--imgleft {
         img {
@@ -226,7 +225,16 @@
     .media-content {
         height: 100%;
         background-color: #fff;
-        padding: 60px 50px 0;
+        padding: 30px 15px 0;
+        @media(min-width: 992px) {
+            padding: 60px 50px 0;
+        }
+    }
+}
+.feature {
+    margin-bottom: 30px;
+    @media(min-width: 992px) {
+        margin-bottom: 0;
     }
 }
 .feature-title {

@@ -1,7 +1,7 @@
 @import 'variables';
 
 .form {
-    margin: 70px 0 105px;
+    margin: 50px 0 105px;
 }
 .required-mark {
     font-size: 13px;
@@ -18,11 +18,14 @@
     width: 100%;
     font-size: 18px;
     label {
-        display: table-cell;
-        width: 25%;
+        width: 100%;
         font-size: 18px;
         font-weight: 700;
         vertical-align: top;
+        @media(min-width: 768px) {
+            display: table-cell;
+            width: 25%;
+        }
     }
     .required {
         color: #ea6060;
@@ -39,7 +42,6 @@
     input[type='text'],
     input[type="phone"],
     textarea {
-        display: table-cell;
         width: 100%;
         border: 0;
         font-size: 18px;
@@ -47,6 +49,9 @@
         background-color: #eaeaea;
         padding: 5px 15px;
         vertical-align: top;
+        @media(min-width: 768px) {
+            display: table-cell;
+        }
     }
     fieldset {
         display: table-cell;
@@ -58,6 +63,7 @@
         }
         input[type='text'] {
             width: auto;
+            margin-bottom: 20px;
         }
     }
     select {
@@ -77,14 +83,15 @@
     padding: 30px;
     margin-bottom: 30px;
     height: 200px;
-    overflow-y: hidden;
+    overflow-y: scroll;
 }
 .form-agree {
     font-size: 18px;
     border-left: 3px solid #1293c3;
+    padding-left: 10px;
     margin-bottom: 30px;
     input[type="checkbox"] {
-        margin: 0 10px;
+        margin-right: 10px;
     }
 }
 .btn-action--narrow .ok {
