@@ -387,14 +387,36 @@
 }
 .pickup-table {
     background-color: #fff;
-    width: 100%;
+    width: auto;
     margin-bottom: 117px;
+    table-layout: fixed;
+    left: 0;
+    top:0;
     th, td {
         border: 1px solid #bcbcbc;
-        font-size: 28px;
+        font-size: 18px;
         font-weight: normal;
         text-align: center;
         padding: 15px 0;
+        word-break: keep-all;
+    }
+    @media(min-width: 992px) {
+        width: 100%;
+        th, td {
+            font-size: 28px;
+            width: auto;
+            word-break: initial;
+        }
+    }
+}
+.slider-mobile {
+    position: relative;
+    @media(min-width: 0) and (max-width: 768px) {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        height: 500px;
     }
 }
 .entry-list {
@@ -437,5 +459,4 @@
         left: 0;
     }
 }
-
 

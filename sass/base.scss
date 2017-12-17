@@ -114,6 +114,7 @@ body {
     border-radius: 2px;
     padding: 18px 0;
     width: 420px;
+    max-width: 100%;
     &:hover,
     &:link,
     &:active,
@@ -231,7 +232,9 @@ body {
     margin: inherit auto;
 }
 .u-overlap-section {
-    margin-top: -250px;
+    @media(min-width: 992px) {
+        margin-top: -250px;
+    }
 }
 #video {
     .row {
