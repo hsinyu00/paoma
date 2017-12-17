@@ -35,7 +35,11 @@ body {
     background-color: #f8f8f8;
     font-size: $font-size-base;
     font-family: $font-family-base;
-    padding-top: 85px;
+    padding-top: 66px;
+
+    @media(min-width: 992px) {
+        padding-top: 85px;
+    }
 }
 .breadcrumb {
     background-color: transparent;
