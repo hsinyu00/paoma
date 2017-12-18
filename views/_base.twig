@@ -25,7 +25,8 @@
 
     {% block css %}{% endblock %}
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
 </head>
 <body>
     {% block header %}
@@ -37,13 +38,11 @@
 
     {% include "partials/_footer.twig" %}
 
-<script src="https://unpkg.com/jquery@3.2.1/dist/jquery.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 <script>
     $(function() {
         // mobile detect
         var isMobile = /(phon|android|iPad|iPod|opera mini|blackberry|IEMobile|nokia|motorola|sonyericsson|samsung|lg-|sie-|tablet)/i.test(navigator.userAgent);
-        $('.show-mobile')[isMobile ? 'show' : 'hide']();
-        $('.hide-mobile')[!isMobile ? 'show' : 'hide']();
 
         // [mobile only] header menu toggle
         $('.nav-toggle-mobile').click(function(e){

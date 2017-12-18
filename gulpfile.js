@@ -27,9 +27,13 @@ gulp.task('htmls', function () {
 });
 
 // copy
+var copyPath = [
+    'images/**/*.*',
+    'vendors/**/*.*'
+];
 gulp.task('copy', function () {
-    return gulp.src('images/**/*.*')
-        .pipe(gulp.dest('public/images'));
+    return gulp.src(copyPath, {base: './'})
+        .pipe(gulp.dest('public'));
 });
 
 
