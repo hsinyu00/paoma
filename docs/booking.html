@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-TW">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
+    <meta name="keywords" content="關鍵字">
+    <meta name="description" content="網頁描述">
+    <title>寶馬旅行社</title>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="網頁標題"/>
+    <meta property="og:url" content=""/>
+    <meta property="og:description" content="網頁描述" />
+    <meta property="og:image" content=""/>
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <!-- 套件 CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" media="screen">
+
+    <link href="css/base.css" rel="stylesheet">
+
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|PT+sans" rel="stylesheet">
+
+        <link href="css/form.css" rel="stylesheet">
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+        <header>
+    <a href="/" class="logo"><img src="images/logo.png" alt="98 趣台灣"></a>
+    <nav>
+        <ul class="header-nav">
+            <li><a href="pickup.html">機場接送</a></li>
+            <li><a href="trip-index.html">熱門行程</a></li>
+            <li><a href="customize.html">自行規劃</a></li>
+            <li><a href="promotion.html">本月特惠</a></li>
+            <li class="header-nav-video"><a href="video.html">影音欣賞</a></li>
+            <li class="header-nav-guide"><a href="guide.html">旅遊達人</a></li>
+        </ul>
+        <a href="message.html" class="header-nav-forum">留言板</a>
+    </nav>
+    <a class="nav-toggle-mobile d-block d-lg-none" href="#">
+        <i class="icon-hamburger"></i>
+        <span class="label">Menu</span>
+    </a>
+</header>    
+        <h2 class="section-title">立即報名 ‧ 熱門行程</h2>
+    <h4 class="section-subtitle">旅遊的事，就放心交給我們吧</h4>
+    <p class="section-text u-align-center">在臺灣，每個所到之處，多樣的文化特質都充沛鼓動著<br>
+        雕龍畫棟的廟宇與現代的街道完美吻合<br>
+        還有許多世界級餐廳隨時提供您最正統的各式中華料理<br>
+        就等您規劃出來，讓我們帶您去您想去的地方
+    </p>
+    <div class="full-width full-width--beige d-none d-lg-block">
+        <div class="container">
+           <h3 class="media-title">Information</h3>
+           <h5 class="media-subtitle">お問い合わせフォーム</h5>
+           <p>我們將您珍貴的旅遊計劃，透過多年專業的旅行家，為您真正的量身訂作出流暢、舒服、貼心的旅程<br>
+只要填寫以下的訊息交給我們，包含一切旅程及住宿您都可以全面安心<br>
+若您對我們所提供的產品及服務有任何的疑問或建議，請留下訊息及聯絡資料，我們將儘速為您處理，謝謝！
+           </p>
+           <p class="remark">請務必留下正確的訊息及聯絡資料，若有特殊需求請詳細註明，謝謝！</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <form class="form">
+            <div class="required-mark">※ 必須</div>
+            <div class="form-item">
+                <label for="cname">您的全名</label>
+                <input type="text" class="form-textfield" id="cname" placeholder="正確填寫您的姓氏與名字。舉例：符宇帆">
+            </div>
+             <div class="form-item">
+                <label for="email">電子信箱<i class="required">※</i></label>
+                <input type="text" class="form-textfield" id="email">
+            </div>
+            <div class="form-item">
+                <label>行程名稱</label>
+                <p>【連休假期】農場+海洋公園歡樂2日(經濟篇 )參考售價 : 3990元 </p>
+            </div>
+            <div class="form-item">
+                <label>參加人數</label>
+                <span>
+                    <select>
+                        <option>4</option>
+                    </select>
+                    成人
+                </span>
+                <span>
+                    <select>
+                        <option>1</option>
+                    </select>
+                    12 歲以下小孩
+                </span>
+                <span>
+                    <select>
+                        <option>0</option>
+                    </select>
+                    嬰兒
+                </span>
+                <p class="remark">注意：價格將按照您的人數及需求而改變，價格僅供參考，實際價格將依照您的訂單需求報價給您</p>
+            </div>
+            <div class="form-item">
+                <label for="tel">您的聯絡電話</label>
+                <input type="phone" id="tel" placeholder="國際電話請注意填寫國碼">
+            </div>
+            <div class="form-item">
+                <label for="misc">您的旅程相關需求</label>
+                <fieldset>
+                    <input type="checkbox" name="misc"><label>簽證或來台其它相關</label><br>
+                    <input type="checkbox" name="misc"><label>來回或單程機票</label><br>
+                    <span>
+                        <input type="checkbox" name="misc"><label>飯店訂房：</label>
+                    </span>
+                    <br class="d-block d-md-none">
+                    <span>
+                        <input type="radio" name="room"><label>一星級</label>
+                        <input type="radio" name="room"><label>二星級</label>
+                        <input type="radio" name="room"><label>三星級</label>
+                        <br class="d-block d-md-none">
+                        <input type="radio" name="room"><label>四星級</label>
+                        <input type="radio" name="room"><label>五星級</label>
+                    </span><br>
+                    <span><input type="checkbox" name="misc"><label>機場接送</label></span><br>
+                    <span><input type="checkbox" name="misc"><label>其他</label></span>
+                    <span><input type="text" placeholder="特殊的票券或門票。舉例：我想去礁溪泡溫泉和故宮看展"></span>
+                </fieldset>
+            </div>
+            <div class="form-item">
+                <label for="special">您的特殊需求描述</label>
+                <textarea class="form-textarea" id="special" rows="8" placeholder="明確的填寫您的特殊需求，我們將依照您的需求為您訂做出最佳的品質&#10;
+舉例：我們有五人，其中兩人希望全程均住五星飯店，希望五人一起玩
+但是住不同的飯店"></textarea>
+            </div>
+            <p>親愛的朋友們，趣台灣旅遊網絕對保護與尊重您個人的隱私權，並依據「個人資料保護法」制定下述規範
+請您詳細閱讀趣台灣旅遊網線上搜集使用者個人資料的方式、範圍、利用方法、以及查詢或更正的方式等事項；
+有任何疑問，可以利用電子郵件和我們客服中心聯絡，我們將儘快回覆說明。</p>
+            <div class="form-term">
+                對於客戶資料絕對保密，我們不會將您的資料提供給第三人，或移作其他目的使用。當您參與
+我們各類旅遊服務時，您所提供之個人資料皆會儲存於安全防護之系統中。當您點選不屬於本
+網站或網頁連結時，請您注意網站安全性。歡迎您安心使用我們所提供之各項服務，若若有任
+何疑問，竭誠歡迎您來電(02)2511-7373與我們聯絡。
+            </div>
+
+            <div class="form-agree"><input type="checkbox" name="misc">※ 點擊左側方框，即表示您已閱讀並同意旅遊契約條款</div>
+            <button class="btn-action btn-action--black btn-action--narrow"><span class="ok">ok</span>完成訂購</button>
+        </form>
+    </div>
+
+    <footer>
+    <div class="footer-sns">
+        <div class="container">
+            <a href=""><i class="fa fa-facebook"></i></a>
+            <a href=""><i class="fa fa-twitter"></i></a>
+            <a href=""><i class="fa fa-weixin"></i></a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="footer-contact">寶馬旅行社有限公司 入境部 Pao Ma Travel Service<br>
+        總 公 司 ：(02)2511-7373 傳真：(02)2511-7306<br>
+        地址：台北市104中山區南京東路二段100號7樓之2<br>
+        綜合旅行社 交觀綜2157號 品保協會會員北1234號<br>
+        代表人：蔡興民 聯絡人：符宇帆 <br>
+        聯絡我們：fuyunlin551002@hotmail.com</div>
+        <ul class="footer-nav">
+            <li class="d-none d-lg-block"><h5>關於趣台灣</h5>
+                <ul class="footer-subnav">
+                    <li><a href="pickup.html">機場接送</a></li>
+                    <li><a href="guide.html">旅遊達人</a></li>
+                    <li><a href="message.html">留言板</a></li>
+                </ul>
+            </li>
+            <li class="d-none d-lg-block"><h5>趣台灣行程</h5>
+                <ul class="footer-subnav">
+                    <li><a href="trip-index.html">熱門行程</a></li>
+                    <li><a href="attraction-index.html">熱門景點</a></li>
+                    <li><a href="customize.html">自行規劃</a></li>
+                    <li><a href="promotion.html">本月特惠</a></li>
+                    <li><a href="video.html">影音欣賞</a></li>
+                </ul>
+            </li>
+            <li><h5 class="d-none d-lg-block">網站條款</h5>
+                <ul class="footer-subnav">
+                    <li><a href="privacy.html">隱私權說明</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="footer-cis">
+            <img class="footer-logo" src="images/logo-w.png" alt="98 趣台灣">
+            <a class="tel" href="tel:+886-2-2511-7373">+886-2-2511-7373</a>
+        </div>
+    </div>
+</footer>
+
+<script src="https://unpkg.com/jquery@3.2.1/dist/jquery.js"></script>
+<script>
+    $(function() {
+        // mobile detect
+        var isMobile = /(phon|android|iPad|iPod|opera mini|blackberry|IEMobile|nokia|motorola|sonyericsson|samsung|lg-|sie-|tablet)/i.test(navigator.userAgent);
+        $('.show-mobile')[isMobile ? 'show' : 'hide']();
+        $('.hide-mobile')[!isMobile ? 'show' : 'hide']();
+
+        // [mobile only] header menu toggle
+        $('.nav-toggle-mobile').click(function(e){
+            e.stopPropagation();
+            if($('header').hasClass('is-open-mobile')) {
+                $('header').removeClass('is-open-mobile');
+                $(this).find('i').addClass('icon-hamburger');
+                $(this).find('i').removeClass('icon-close');
+                $(this).find('.label').html('Menu');
+            } else {
+                $('header').addClass('is-open-mobile');
+                $(this).find('i').removeClass('icon-hamburger');
+                $(this).find('i').addClass('icon-close');
+                $(this).find('.label').html('Close');
+            }
+        });
+    });
+</script>
+
+
+</body>
+</html>
