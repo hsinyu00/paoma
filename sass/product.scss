@@ -407,30 +407,20 @@
     top:0;
     th, td {
         border: 1px solid #bcbcbc;
-        font-size: 20px;
+        font-size: 14px;
         font-weight: normal;
         text-align: center;
         padding: 15px 0;
         word-break: keep-all;
         font-family: "Open sans", sans-serif, $font-family-base;
     }
-    @media(min-width: 992px) {
+    @media(min-width: 768px) {
         width: 100%;
         th, td {
             font-size: 25px;
             width: auto;
             word-break: initial;
         }
-    }
-}
-.slider-mobile {
-    position: relative;
-    @media(min-width: 0) and (max-width: 768px) {
-        width: 100%;
-        max-width: 100%;
-        overflow-x: auto;
-        overflow-y: hidden;
-        height: 500px;
     }
 }
 .entry-list {
