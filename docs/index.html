@@ -24,8 +24,11 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|PT+sans" rel="stylesheet">
 
         <link href="css/product.css" rel="stylesheet">
+    <link href="css/slick.css" rel="stylesheet">
+    <link href="css/slick-theme.css" rel="stylesheet">
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
 </head>
 <body>
         <header>
@@ -46,8 +49,11 @@
         <span class="label">Menu</span>
     </a>
 </header>    
-        <div class="container">
+        <div class="slider slider-big">
         <img src="images/keyimg.jpg" alt="原始部落之美">
+        <div><img src="http://via.placeholder.com/1366x615"></div>
+        <div><img src="http://via.placeholder.com/1366x615/ffffff/000000"></div>
+        <div><img src="http://via.placeholder.com/1366x615/000000/ffffff"></div>
     </div>
     <div class="full-width full-width--orange" id="video">
         <h2 class="section-title title--white">精彩影片欣賞</h2>
@@ -175,13 +181,11 @@
     </div>
 </footer>
 
-<script src="https://unpkg.com/jquery@3.2.1/dist/jquery.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 <script>
     $(function() {
         // mobile detect
         var isMobile = /(phon|android|iPad|iPod|opera mini|blackberry|IEMobile|nokia|motorola|sonyericsson|samsung|lg-|sie-|tablet)/i.test(navigator.userAgent);
-        $('.show-mobile')[isMobile ? 'show' : 'hide']();
-        $('.hide-mobile')[!isMobile ? 'show' : 'hide']();
 
         // [mobile only] header menu toggle
         $('.nav-toggle-mobile').click(function(e){
@@ -201,6 +205,20 @@
     });
 </script>
 
+    <script type="text/javascript" src="vendors/slick.min.js"></script>
+    <script>
+    $(function() {
+        $('.slider-big').slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 3000,
+          arrows: true,
+          prevArrow: '<button type="button" class="slick-prev"></button>',
+          nextArrow: '<button type="button" class="slick-next"></button>'
+        });
+    });
+    </script>
 
 </body>
 </html>
