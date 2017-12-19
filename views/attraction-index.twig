@@ -10,7 +10,7 @@
             <div class="col-xs-12 col-md-3">
                 <div class="sidebar">
                     <div class="sidebar-header">快速前往</div>
-                    <ul class="sidebar-nav">
+                    <ul class="sidebar-nav d-none d-md-block">
                         <li><h3>北部景點<br><span>North</span></h3>
                             <ul class="sidebar-subnav">
                                 <li><a href="#">台北人文</a></li>
@@ -57,4 +57,16 @@
     </div>
 
     {% include 'partials/_contact-booking.twig' %}
+{% endblock %}
+
+
+{% block js %}
+<script>
+$(function(){
+    $('.sidebar-header').click(function(){
+        $(this).toggleClass('is-open');
+        $('.sidebar-nav').toggleClass('d-none');
+    });
+});
+</script>
 {% endblock %}

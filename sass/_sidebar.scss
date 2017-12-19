@@ -22,6 +22,12 @@
         border-bottom: 1px solid #808080;
         transform: rotateZ(45deg);
     }
+    @media(min-width: 0) and (max-width: 576px) {
+        &.is-open::after {
+            top: 20px;
+            transform: rotateZ(225deg);
+        }
+    }
 }
 .sidebar-nav {
     border-top: 10px solid $orange;
