@@ -195,33 +195,50 @@ body {
 .banner-contact--xl {
     @include clearfix();
     background-color: #fff;
-    padding: 40px 70px;
-    margin: 60px 0 100px;
+    padding: 20px;
+    margin: 20px 0 60px;
     line-height: 1.1;
     .tel {
-        font-size: 48px;
+        font-size: 36px;
         color: #000;
+        margin-bottom: 15px;
+    }
+    @media(min-width: 992px) {
+        padding: 40px 70px;
+        margin: 60px 0 100px;
+        .tel {
+            font-size: 48px;
+            margin-bottom: 0;
+        }
     }
 }
 .banner-contact-left {
-    float: left;
     font-size: 24px;
     color: #000;
-    padding-top: 10px;
     span {
         color: $orange;
         font-size: 14px;
     }
+    @media(min-width: 992px) {
+        float: left;
+        padding-top: 10px;
+    }
 }
 .banner-contact-right {
-    float: right;
-    text-align: right;
     span {
         font-size: 18px;
         color: #808080;
     }
     .remark {
         color: $orange;
+        display: block;
+    }
+    @media(min-width: 992px) {
+        float: right;
+        text-align: right;
+        .remark {
+            display: inline;
+        }
     }
 }
 .banner-contact-remark {
