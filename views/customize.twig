@@ -145,15 +145,20 @@
             <p>親愛的朋友們，趣台灣旅遊網絕對保護與尊重您個人的隱私權，並依據「個人資料保護法」制定下述規範
 請您詳細閱讀趣台灣旅遊網線上搜集使用者個人資料的方式、範圍、利用方法、以及查詢或更正的方式等事項；
 有任何疑問，可以利用電子郵件和我們客服中心聯絡，我們將儘快回覆說明。</p>
-            <div class="form-term">
-                對於客戶資料絕對保密，我們不會將您的資料提供給第三人，或移作其他目的使用。當您參與
-我們各類旅遊服務時，您所提供之個人資料皆會儲存於安全防護之系統中。當您點選不屬於本
-網站或網頁連結時，請您注意網站安全性。歡迎您安心使用我們所提供之各項服務，若若有任
-何疑問，竭誠歡迎您來電(02)2511-7373與我們聯絡。
-            </div>
+            <iframe id="terms" src="privacy.html" width="100%" height="300"></iframe>
 
             <div class="form-agree"><input type="checkbox" name="misc">※ 點擊左側方框，即表示您已閱讀並同意旅遊契約條款</div>
             <button class="btn-action btn-action--black btn-action--narrow"><span class="ok">ok</span>完成訂購</button>
         </form>
     </div>
+{% endblock %}
+
+{% block js %}
+<script>
+$(function(){
+    $('#terms').on('load',function(){
+        $(this).contents().find('header,footer').remove();
+    });
+});
+</script>
 {% endblock %}
