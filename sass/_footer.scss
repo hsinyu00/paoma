@@ -45,6 +45,9 @@ footer {
     margin-top: 15px;
     @media(min-width: 992px) {
         float: left;
+        width: 45%;
+    }
+    @media(min-width: 1200px) {
         width: 50%;
     }
     > li {
