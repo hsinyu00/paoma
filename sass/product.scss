@@ -449,6 +449,10 @@
         word-break: keep-all;
         font-family: "Open sans", sans-serif, $font-family-base;
     }
+    .u-align-left {
+        text-align: left;
+        padding-left: 15px;
+    }
     @media(min-width: 768px) {
         width: 100%;
         th, td {
@@ -496,6 +500,13 @@
         position: absolute;
         top: 0;
         left: 0;
+    }
+}
+
+#car-intro {
+    img + img,
+    img + .row {
+        margin-top: 85px;
     }
 }
 
