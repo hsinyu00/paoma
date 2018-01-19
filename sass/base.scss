@@ -297,3 +297,19 @@ body {
         vertical-align: sub;
     }
 }
+.floater {
+    width: 100px;
+    height: 245px;
+    position: fixed;
+    top: 75px;
+    right: 10px;
+    box-shadow: 3px 3px 7px 0px rgba(120, 120, 120, 0.5);
+    z-index: 200;
+    transition-timing-function: ease-out;
+    transition-property: top;
+    transition-duration: 0.5s;
+
+    @media(min-width: 992px) {
+        top: 90px;
+    }
+}

@@ -59,6 +59,21 @@
                 $(this).find('.label').html('Close');
             }
         });
+
+        // 浮動拉霸
+        var $flt = $('.floater');
+        var initPos = $flt.offset().top;
+
+        window.addEventListener('scroll', floaterFixed);
+
+        function floaterFixed() {
+          if ($(window).scrollTop() > initPos) {
+            var shift = $(window).scrollTop();
+            $flt.css('top', initPos + shift * 0.1);
+          } else {
+            $flt.css('top', initPos);
+          }
+        }
     });
 </script>
 
