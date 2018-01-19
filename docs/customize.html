@@ -46,7 +46,10 @@
         <i class="icon-hamburger"></i>
         <span class="label">Menu</span>
     </a>
-</header>    
+</header>
+<div class="floater">
+    <img src="/images/banner.gif">
+</div>    
         <h2 class="section-title">自訂行程規劃</h2>
     <h4 class="section-subtitle">旅遊的事，就放心交給我們吧</h4>
     <p class="section-text u-align-center">在臺灣，每個所到之處，多樣的文化特質都充沛鼓動著<br>
@@ -260,6 +263,21 @@
                 $(this).find('.label').html('Close');
             }
         });
+
+        // 浮動拉霸
+        var $flt = $('.floater');
+        var initPos = $flt.offset().top;
+
+        window.addEventListener('scroll', floaterFixed);
+
+        function floaterFixed() {
+          if ($(window).scrollTop() > initPos) {
+            var shift = $(window).scrollTop();
+            $flt.css('top', initPos + shift * 0.1);
+          } else {
+            $flt.css('top', initPos);
+          }
+        }
     });
 </script>
 

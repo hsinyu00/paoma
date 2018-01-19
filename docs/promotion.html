@@ -46,7 +46,10 @@
         <i class="icon-hamburger"></i>
         <span class="label">Menu</span>
     </a>
-</header>    
+</header>
+<div class="floater">
+    <img src="/images/banner.gif">
+</div>    
         <div class="container">
         <h2 class="section-title">本月特惠</h2>
         <h4 class="section-subtitle">在此將您的精彩回憶盡情寫下!</h4>
@@ -132,6 +135,21 @@
                 $(this).find('.label').html('Close');
             }
         });
+
+        // 浮動拉霸
+        var $flt = $('.floater');
+        var initPos = $flt.offset().top;
+
+        window.addEventListener('scroll', floaterFixed);
+
+        function floaterFixed() {
+          if ($(window).scrollTop() > initPos) {
+            var shift = $(window).scrollTop();
+            $flt.css('top', initPos + shift * 0.1);
+          } else {
+            $flt.css('top', initPos);
+          }
+        }
     });
 </script>
 
